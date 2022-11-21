@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --bg-color: #020305;
+  --color-text: #ffffff;
+  --color-text-secondary: #ccc;
+  --bg-botao-color: #fff;
+  --color-text-botao: #000;
+  --border-botao-color: #ccc;
+  --bg-card: #e7e5e4;
+  --bg-card-hover: #171717;
+  --bg-botao-card: #0E0E0E;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-logo {
+  width: 130px;
+}
+
+.logo-nike-store {
+  color: var(--color-text);
+  /* font-size: 1.3rem; */
+  font-weight: 700;
+}
+
+.lista-container {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.links-container {
+  color: var(--color-text);
+  padding: 30px;
+  /* margin-top: 10px; */
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.links-container:hover {
+  transform: scale(1.1);
+}
+
+.container-principal {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-left:40px; */
+  margin-top: 30px;
+}
+
+.titulo-nike-air-max {
+  color: var(--color-text);
+  font-size: 40px;
+  align-items: center;
+  margin-top: 100px;
+  font-weight: 400;
+}
+
+.texto-descricao {
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.btn-comprar {
+  background-color: var(--bg-botao-color);
+  color: var(--color-text-botao);
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 15px;
+  border-radius: 150px;
+  cursor: pointer;
+  border: 1px solid var(--border-botao-color);
+}
+
+.btn-comprar:hover {
+  background-color: var(--bg-color);
+  color: var(--color-text);
+  cursor: pointer;
+  border: 1px solid var(--color-text);
+}
+
+.img-tenis {
+  width: 500px; 
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+.conteudo-2 {
+    margin-top: 50px;
+}
+
+.titulo-novidades {
+    text-align:center;
+    color: var(--color-text);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.card {
+    margin-left: 20px;
+    background-color:  var(--bg-card);
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.card:hover  {
+    background-color: var(--bg-card-hover);
+    color: var(--color-text);
+  
+}
+
+.translateY:hover {
+    transform: translateY(-15px);
+    transition: 0.6s;
+  }
+
+.tenis {
+    width: 250px;
+    border-radius: 10px;
+    /* margin-top: 15px; */
+    /* margin-bottom: 150px; */
+}
+
+.nome-do-tenis, .preços{
+    text-align: center;
+    margin-top:20px;
+}
+
+.btn-comprar-1 {
+    background-color: var(--bg-botao-card);
+    color:var(--color-text);
+    width:150px;
+    height:30px;
+    margin-top: 10px;
+    align-items:center;
+    border-radius: 20px;
+    border: 1px solid var(--color-text);
+    margin-left: 40px;
+}
