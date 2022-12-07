@@ -10,18 +10,23 @@
 :root {
   --bg-color: #020305;
   --color-text: #ffffff;
-  --color-text-secondary: #ccc;
+  --color-text-secondary: #d3d3d3;
   --bg-botao-color: #fff;
   --color-text-botao: #000;
   --border-botao-color: #ccc;
   --bg-card: #e7e5e4;
-  --bg-card-hover: #171717;
-  --bg-botao-card: #0E0E0E;
+  --bg-card-hover: #ff6600;
+  --bg-botao-card: #0e0e0e;
 }
 
+html,
 body {
   background-color: var(--bg-color);
+  height: 100%;
+  transition: 0.3s;
 }
+
+/* Header ul li links */
 
 .header-container {
   display: flex;
@@ -32,22 +37,22 @@ body {
   width: 130px;
 }
 
-.logo-nike-store {
-  color: var(--color-text);
-  /* font-size: 1.3rem; */
-  font-weight: 700;
-}
-
 .lista-container {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
+.icon-hamburguer {
+  display: none;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
 .links-container {
   color: var(--color-text);
   padding: 30px;
-  /* margin-top: 10px; */
+  font-size: 18px;
   display: flex;
   justify-content: space-around;
   text-decoration: none;
@@ -57,11 +62,25 @@ body {
   transform: scale(1.1);
 }
 
+input {
+  background-color: var(--color-text);
+}
+
+.carrinho-container {
+  width: 360px;
+  height:  520px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Container principal */
 .container-principal {
   display: flex;
   justify-content: space-evenly;
-  /* margin-left:40px; */
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .titulo-nike-air-max {
@@ -79,12 +98,16 @@ body {
   font-weight: 400;
 }
 
+
+
 .btn-comprar {
   background-color: var(--bg-botao-color);
   color: var(--color-text-botao);
   width: 200px;
   height: 40px;
   font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
   margin-top: 15px;
   border-radius: 150px;
   cursor: pointer;
@@ -99,64 +122,265 @@ body {
 }
 
 .img-tenis {
-  width: 500px; 
+  width: 450px;
   cursor: pointer;
-  border-radius: 200px;
+  border-radius: 250px;
 }
 
 .conteudo-2 {
-    margin-top: 50px;
+  margin-top: 100px;
 }
 
 .titulo-novidades {
-    text-align:center;
-    color: var(--color-text);
+  text-align: center;
+  color: var(--color-text);
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
 }
 
 .card {
-    margin-left: 20px;
-    background-color:  var(--bg-card);
-    margin-top: 30px;
-    border-radius: 20px;
+  width: 250px;
+  margin-left: 20px;
+  background-color: var(--bg-card);
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
-.card:hover  {
-    background-color: var(--bg-card-hover);
-    color: var(--color-text);
-  
+.card:hover {
+  background-color: var(--bg-card-hover);
+  color: var(--color-text);
+  transition: 0.4s;
 }
 
 .translateY:hover {
-    transform: translateY(-15px);
-    transition: 0.6s;
-  }
-
-.tenis {
-    width: 250px;
-    border-radius: 10px;
-    /* margin-top: 15px; */
-    /* margin-bottom: 150px; */
+  transform: translateY(-15px);
+  transition: 0.6s;
 }
 
-.nome-do-tenis, .preços{
-    text-align: center;
-    margin-top:20px;
+.tenis {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.nome-do-tenis,
+.preços {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.preços {
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 .btn-comprar-1 {
-    background-color: var(--bg-botao-card);
-    color:var(--color-text);
-    width:150px;
-    height:30px;
-    margin-top: 10px;
-    align-items:center;
-    border-radius: 20px;
-    border: 1px solid var(--color-text);
-    margin-left: 40px;
+  background-color: var(--bg-botao-card);
+  color: var(--color-text);
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--color-text);
+  margin-left: 40px;
+}
+
+.btn-comprar-1:hover {
+  background-color: var(--color-text);
+  color: var(--bg-color);
+}
+
+.conteudo-3 {
+  margin-top: 100px;
+}
+
+.titulo-colecao {
+  color: var(--color-text);
+  text-align: center;
+}
+
+.cards-container-colecao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-colecao {
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 40px;
+  background-color: var(--color-text-secondary);
+}
+
+.card-colecao:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.tenis-colecao {
+  width: 250px;
+  height: 250px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.btn-colecao {
+  width: 150px;
+  height: 50px;
+  align-items: center;
+  background-color: var(--color-text);
+  color: var(--bg-color);
+  font-weight: 700;
+  margin-left: 70px;
+  border-radius: 50px;
+  border: 1px solid var(--color-text-secondary);
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+
+.btn-colecao:hover {
+  background-color: var(--bg-color);
+  color: var(--color-text);
+  border: 1px solid var(--color-text-secondary);
+}
+
+/* footer */
+
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  background-color: var(--bg-color);
+  margin-top: 100px;
+}
+
+.footer-nike-club {
+  text-align: center;
+  color: var(--color-text);
+}
+
+.logo-nike-footer {
+  width: 150px;
+  height: 150px;
+  margin-left: 100px;
+}
+
+.links-footer {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.links-footer:hover {
+  transform: scale(1.3);
+}
+
+.links {
+  margin-top: 20px;
+}
+
+/* Smartphone */
+
+@media screen and (max-width: 767px) {
+  .lista-container {
+    display: none;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+
+  .icon-hamburguer {
+    display: flex;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .lista-container {
+    display: none;
+  }
+
+  .container-principal {
+    display: block;
+  }
+
+  .conteudo-1 {
+    display: grid;
+    justify-content: center;
+  }
+
+  .btn-comprar {
+    width: 100%;
+  }
+
+  .img-tenis {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    margin-top: 30px;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tenis-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .titulo-novidades {
+    text-align: center;
+  }
+
+  .titulo-colecao {
+    display: flex;
+    justify-content: center;
+  }
+
+  .conteudo-3 {
+    display: grid;
+    justify-content: center;
+  }
+}
+
+/* Tablete */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-container {
+    display: none;
+  }
+
+  .container-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .conteudo-1 {
+    display: grid;
+    justify-content: center;
+  }
 }
