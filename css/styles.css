@@ -10,7 +10,7 @@
 :root {
   --bg-color: #020305;
   --color-text: #ffffff;
-  --color-text-secondary: #d3d3d3;
+  --color-text-secondary: #27272a;
   --bg-botao-color: #fff;
   --color-text-botao: #000;
   --border-botao-color: #ccc;
@@ -70,20 +70,6 @@ body {
   transform: scale(1.1);
 }
 
-input {
-  background-color: var(--color-text);
-}
-
-.carrinho-container {
-  width: 360px;
-  height:  520px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Main Container principal */
 .container-principal {
   display: flex;
@@ -105,8 +91,6 @@ input {
   margin-top: 10px;
   font-weight: 400;
 }
-
-
 
 .btn-comprar {
   background-color: var(--bg-botao-color);
@@ -214,6 +198,7 @@ input {
   text-align: center;
 }
 
+/* Card coleção */
 .cards-container-colecao {
   display: flex;
   flex-wrap: wrap;
@@ -259,6 +244,69 @@ input {
   background-color: var(--bg-color);
   color: var(--color-text);
   border: 1px solid var(--color-text-secondary);
+}
+
+/* Comprar agora */
+.section-comprar{
+  margin-top: 150px;
+}
+
+.titulo-comprar {
+  color: var(--color-text);
+  text-align: center;
+}
+
+.container-card-comprar-agora {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card-comprar {
+  width: 300px;
+  height: 400px;
+  background-color: var(--color-text-secondary);
+  margin-left: 50px;
+  border-radius: 40px;
+}
+
+.card-comprar:hover {
+  background-color: var(--bg-card-hover);
+}
+
+.tenis-1 {
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+  margin-top: 50px;
+  background-color: var(--color-text-secondary);
+}
+
+.preços-comprar {
+  color: var(--color-text);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.button-comprar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-comprar-agora{
+  width: 150px;
+  height: 50px;
+  background-color: var(--color-text-botao);
+  border-radius: 50px;
+  color: var(--color-text);
+}
+
+.btn-comprar-agora:hover {
+  background-color: var(--bg-card-hover);
+  border: 1px solid var(--color-text);
 }
 
 /* footer */
@@ -396,9 +444,9 @@ input {
   }
 
   .img-tenis {
-    display: flex;
-    justify-content: center;
+    
     width: 250px;
+    height:25opx;
     margin-top: 30px;
   }
 
