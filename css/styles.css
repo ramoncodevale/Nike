@@ -10,12 +10,12 @@
 :root {
   --bg-color: #020305;
   --color-text: #ffffff;
-  --color-text-secondary: #27272a;
+  --color-text-secondary: #D8c277;
   --bg-botao-color: #fff;
   --color-text-botao: #000;
   --border-botao-color: #ccc;
   --bg-card: #e7e5e4;
-  --bg-card-hover: #ff6600;
+  --bg-card-hover: #fff;
   --bg-botao-card: #0e0e0e;
 }
 
@@ -142,7 +142,7 @@ body {
 }
 
 .card:hover {
-  background-color: var(--bg-card-hover);
+  background-color: var(--color-text-secondary);
   color: var(--color-text);
   transition: 0.4s;
 }
@@ -192,72 +192,39 @@ body {
   margin-top: 100px;
 }
 
-.titulo-colecao {
+.titulo-camisas {
   color: var(--color-text);
   text-align: center;
 }
 
-/* Card coleção */
+/* Container camisas  */
 .conteudo-3 {
   margin-top: 150px;
 }
 
-.cards-container-colecao {
+.container-cards-camisas{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
+  justify-content: space-evenly;
 }
 
-.titulo-colecao {
-  margin-top: 150px;
+.titulo-camisas {
+  text-align: center;
 }
 
-.card-colecao {
-  height: 400px;
-  width: 300px;
+.img-camisa {
+  width:500px;
+  height:500px;
   border-radius: 20px;
-  margin-left: 20px;
-  margin-top: 100px;
-  background-color: var(--color-text-secondary);
-}
-
-.card-colecao:hover {
-  background-color: var(--bg-card-hover);
-}
-
-.img-colecao {
-  display: flex;
-  justify-content: center;
-}
-
-.tenis-colecao {
-  width: 250px;
-  height: 250px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 20px;
-}
-
-
-.btn-colecao {
-  width: 150px;
-  height: 50px;
-  align-items: center;
-  background-color: var(--color-text);
-  color: var(--bg-color);
-  font-weight: 700;
-  margin-left: 70px;
-  border-radius: 50px;
-  border: 1px solid var(--color-text-secondary);
-  font-size: 1.3rem;
+  margin-left: 50px;
   margin-top: 30px;
 }
 
-.btn-colecao:hover {
-  background-color: var(--bg-color);
+.descricao-camisa {
   color: var(--color-text);
-  border: 1px solid var(--color-text-secondary);
+  width: 400px;
+  font-size: 1.4rem;
+  margin-top: 100px;
+  padding-left: 60px;
 }
 
 /* Comprar agora */
@@ -475,38 +442,29 @@ body {
     text-align: center;
   }
 
-  /* Cards Coleção */
-  .titulo-colecao {
+  /* Cards Camisas */
+  .container-cards-camisas{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .conteudo-3 {
-    display: grid;
-    justify-content: center;
+  
+  .img-camisa {
+    width:200px;
+    height:200px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
   }
-
-  .card-colecao {
-   width: 300px;
-   height: 300px;
+  
+  .descricao-camisa {
+    color: var(--color-text);
+    width: 400px;
+    font-size: 1rem;
+    margin-top: 100px;
+    padding-left: 60px;
   }
-
-  .img-colecao {
-    display: flex;
-    justify-content: center;
-  }
-
-  .tenis-colecao {
-    width: 200px;
-    height: 200px;
-  }
-
-  .btn-colecao {
-    width: 150px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
+  
 
 /* Cards Comprar agora */
   .section-comprar {
@@ -579,10 +537,36 @@ body {
     justify-content: center;
   }
 
+
+  /* Cards Camisas */
+  .container-cards-camisas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .img-camisa {
+    width:300px;
+    height:300px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  
+  .descricao-camisa {
+    color: var(--color-text);
+    width: 400px;
+    font-size: 1rem;
+    margin-top: 100px;
+    padding-left: 60px;
+  }
+  
+
   .section-comprar {
     display: grid;
     justify-content: center;
   }
+
 
   .container-card-comprar-agora {
     display: grid;
